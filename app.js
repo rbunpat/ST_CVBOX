@@ -9,6 +9,7 @@ var chktime = "";
 var chkdate = "";
 var persontemp = "";
 var personmask = "";
+var devloc = "";
 const client = new DiscordJS.Client({
     intents: [
         DiscordJS.Intents.FLAGS.GUILDS,
@@ -43,6 +44,7 @@ app.post("/", jsonParser, (req, res, next) => {
     imgurl = req.body[0]['img'];
     chktime = req.body[0]['chktime'];
     chkdate = req.body[0]['chkdate'];
+    devloc = req.body[0]['devloc'];
     persontemp = req.body[0]['persontemp'];
     personmask = req.body[0]['personmask'];
     const exampleEmbed = {
@@ -67,6 +69,11 @@ app.post("/", jsonParser, (req, res, next) => {
             {
                 name: 'Date',
                 value: chkdate,
+                inline: true,
+            },
+            {
+                name: 'Location',
+                value: devloc,
                 inline: true,
             },
             {
