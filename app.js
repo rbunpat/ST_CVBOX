@@ -32,7 +32,7 @@ client.on('messageCreate', (message) => {
 app.listen(3000, () => {
     app.use(bodyParser.json({ limit: '50mb' }));
     app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-    console.log("Server running on port 3000");
+    console.log("API Server running on port 3000");
 });
 
 app.get("/", (req, res, next) => {
@@ -56,7 +56,7 @@ app.post("/", jsonParser, (req, res, next) => {
             icon_url: 'https://www.st.ac.th/wp-content/uploads/2013/03/card_logo1.jpg',
             url: 'https://www.st.ac.th',
         },
-        description: 'A student or teacher has their tempurature higher than ...°C',
+        description: 'A student or teacher has their tempurature higher than 37.5°C',
         thumbnail: {
             url: 'https://i.imgur.com/AfFp7pu.png',
         },
@@ -88,11 +88,11 @@ app.post("/", jsonParser, (req, res, next) => {
             }
         ],
         image: {
-            url: 'https://i.imgur.com/AfFp7pu.png',
+            url: imgurl,
         },
         timestamp: new Date(),
     };
-    client.channels.cache.get('996372633706827837').send({ embeds: [exampleEmbed] });
+    client.channels.cache.get('996714473593241650').send({ embeds: [exampleEmbed] });
    }
 );
 
