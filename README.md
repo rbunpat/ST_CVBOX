@@ -8,7 +8,7 @@ This repository contains the code for Suratthani School's temperature measuring 
 
 #### Send data to Discord
 
-```http
+```
   POST :3000/
 ```
 
