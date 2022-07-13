@@ -31,7 +31,7 @@ This repository contains the code for Suratthani School's temperature measuring 
     "personmask": "yes",
     "persontemp": "36",
     "chktime": "2022-07-13 07:27:57",
-    "img": "https://i.imgur.com/YhJ6roD.png"
+    "img": "https://i.imgur.com/YhJ6roD.png",
     "devloc": "front"
   }
 ]
