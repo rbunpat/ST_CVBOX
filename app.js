@@ -4,12 +4,12 @@ var express = require("express");
 const { json } = require('body-parser');
 var app = express();
 var jsonParser = bodyParser.json()
-var imgurl = "";
-var chktime = "";
-var chkdate = "";
-var persontemp = "";
-var personmask = "";
-var devloc = "";
+var imgURL = "";
+var checkTime = "";
+var checkDate = "";
+var personTemp = "";
+var personMask = "";
+var devLoc = "";
 const client = new DiscordJS.Client({
     intents: [
         DiscordJS.Intents.FLAGS.GUILDS,
@@ -36,17 +36,17 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res, next) => {
-    res.json(["Tony","Lisa","Masdsdfsdfichael","Ginger","Foodzaza"]);
+    res.json(["GET Requests does nothing lol, refer to README.md for more info"]);
    });
 
 app.post("/", jsonParser, (req, res, next) => {
     res.json("Server Status: 200 OK");
-    imgurl = req.body[0]['img'];
-    chktime = req.body[0]['chktime'];
-    chkdate = req.body[0]['chkdate'];
-    devloc = req.body[0]['devloc'];
-    persontemp = req.body[0]['persontemp'];
-    personmask = req.body[0]['personmask'];
+    imgURL = req.body[0]['img'];
+    checkTime = req.body[0]['chktime'];
+    checkDate = req.body[0]['chkdate'];
+    devLoc = req.body[0]['devloc'];
+    personTemp = req.body[0]['persontemp'];
+    personMask = req.body[0]['personmask'];
     const exampleEmbed = {
         color: 0x0099ff,
         title: 'Covid-19',
@@ -63,37 +63,37 @@ app.post("/", jsonParser, (req, res, next) => {
         fields: [
             {
                 name: 'Time',
-                value: chktime,
+                value: checkTime,
                 inline: true,
             },
             {
                 name: 'Date',
-                value: chkdate,
+                value: checkDate,
                 inline: true,
             },
             {
                 name: 'Location',
-                value: devloc,
+                value: devLoc,
                 inline: true,
             },
             {
                 name: 'Temperature',
-                value: persontemp,
+                value: personTemp,
                 inline: false,
             },
             {
                 name: 'Mask',
-                value: personmask,
+                value: personMask,
                 inline: false,
             }
         ],
         image: {
-            url: imgurl,
+            url: imgURL,
         },
         timestamp: new Date(),
     };
-    client.channels.cache.get('996714473593241650').send({ embeds: [exampleEmbed] });
+    client.channels.cache.get('996760524131934289').send({ embeds: [exampleEmbed] });
    }
 );
 
-client.login('TOKEN');
+client.login('YOUR TOKEN HERE');
