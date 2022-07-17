@@ -14,12 +14,12 @@ This repository contains the code for Suratthani School's temperature measuring 
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `chkdate` | `string` | Date |
-| `chktime` | `string` | Time |
-| `devloc` | `string` | The device's location (front or back gate) |
-| `personmask` | `string` | Person is wearing mask or not |
-| `persontemp` | `string` | Person's temperature |
-| `img` | `string` | Image URL |
+| `checkDate` | `string` | Date |
+| `checkTime` | `string` | Time |
+| `devLoc` | `string` | The device's location (front or back gate) |
+| `personMask` | `string` | Person is wearing mask or not |
+| `personTemp` | `string` | Person's temperature |
+| `imgURL` | `string` | Image URL |
 
 
 ## POST Request Example
@@ -27,12 +27,12 @@ This repository contains the code for Suratthani School's temperature measuring 
 ```json
 [
   {
-    "chkdate": "2022-07-13",
-    "personmask": "yes",
-    "persontemp": "36",
-    "chktime": "2022-07-13 07:27:57",
-    "img": "https://i.imgur.com/YhJ6roD.png",
-    "devloc": "front"
+    "checkDate": "2022-07-13",
+    "personMask": "yes",
+    "personTemp": "36",
+    "checkTime": "2022-07-13 07:27:57",
+    "imgURL": "https://i.imgur.com/YhJ6roD.png",
+    "devLoc": "front"
   }
 ]
 ```
