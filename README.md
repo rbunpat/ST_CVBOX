@@ -49,5 +49,3 @@ Then
 ```bash
   node app.js
 ```
-
-webhook test
