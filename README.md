@@ -49,3 +49,10 @@ Then
 ```bash
   node app.js
 ```
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` if you want to controbute to this project.
+
